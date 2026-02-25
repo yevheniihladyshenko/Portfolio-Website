@@ -11,9 +11,8 @@
   --shadow: 0 8px 24px rgba(0,0,0,.12);
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
   font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
@@ -36,15 +35,15 @@ body {
   box-shadow: var(--shadow);
   z-index: 1000;
 }
+
 .logo {
   font-weight: 700;
   font-size: 1.2rem;
   text-decoration: none;
   color: #000;
 }
-.logo:hover {
-  color: var(--primary);
-}
+.logo:hover { color: var(--primary); }
+
 .navbar nav {
   display: flex;
   gap: 1.5rem;
@@ -65,12 +64,8 @@ body {
   background: var(--primary);
   transition: width .25s ease;
 }
-.navbar nav a:hover {
-  color: var(--primary);
-}
-.navbar nav a:hover::after {
-  width: 100%;
-}
+.navbar nav a:hover { color: var(--primary); }
+.navbar nav a:hover::after { width: 100%; }
 
 /* ===== Hero ===== */
 .hero {
@@ -114,6 +109,7 @@ body {
   margin: 0 0 1.6rem;
   line-height: 1.6;
 }
+
 .register-btn {
   display: inline-block;
   padding: 12px 24px;
@@ -184,6 +180,7 @@ body {
     linear-gradient(0deg, #000, #000);
   color: var(--white);
 }
+
 .marathon__content {
   max-width: 1200px;
   margin: 0 auto;
@@ -210,13 +207,14 @@ body {
   filter: blur(14px);
   opacity: .35;
 }
+
 .marathon__title {
   font-size: 2.2rem;
   line-height: 1.1;
   margin: 0 0 .6rem;
   color: #fff;
   text-shadow: 0 1px 0 rgba(0,0,0,.25);
-  text-decoration: none; /* прибираємо підкреслення */
+  text-decoration: none !important;
 }
 .marathon__subtitle {
   margin: 0;
@@ -232,6 +230,13 @@ body {
   flex-wrap: wrap;
 }
 
+/* Важливо для <a class="marathon-card"> */
+a.marathon-card,
+a.marathon-card:hover {
+  text-decoration: none !important;
+  color: var(--white) !important;
+}
+
 /* ===== Кнопка ЖОВТА ===== */
 .btn-yellow {
   display: inline-block;
@@ -243,6 +248,8 @@ body {
   border: 1px solid #ffd400;
   box-shadow: 0 10px 24px rgba(255, 212, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, .06);
   transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 .btn-yellow:hover {
   transform: translateY(-2px);
@@ -259,17 +266,12 @@ body {
   transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
   box-shadow: 0 8px 24px rgba(34,148,255,.12);
 }
-.animated-btn:hover {
-  transform: scale(1.04) translateY(-2px);
-}
-.animated-btn:active {
-  transform: scale(0.98);
-}
+.animated-btn:hover { transform: scale(1.04) translateY(-2px); }
+.animated-btn:active { transform: scale(0.98); }
 
 /* ===== Testimonials ===== */
-.testimonials {
-  padding: 2rem 1.5rem;
-}
+.testimonials { padding: 2rem 1.5rem; }
+
 .section-title {
   font-size: 2.2rem;
   margin: 2.5rem auto 1.5rem;
@@ -286,6 +288,8 @@ body {
   background: linear-gradient(90deg, #ffd400, #ffea80);
   border-radius: 2px;
 }
+
+/* Центрування кнопок під відгуками */
 .testimonials-btn {
   display: block;
   width: max-content;
@@ -304,16 +308,14 @@ body {
   padding: 0 10px;
   position: relative;
 }
-.slider-window {
-  overflow: hidden;
-  width: 100%;
-}
+.slider-window { overflow: hidden; width: 100%; }
 .slider-track {
   display: flex;
   gap: 24px;
   transition: transform 0.5s ease;
   padding: 10px 0;
 }
+
 .testimonial-card {
   flex: 0 0 380px;
   background: #fff;
@@ -332,6 +334,7 @@ body {
   transform: scale(1.03);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
 }
+
 .slider-arrow {
   font-size: 2rem;
   padding: 0 12px;
@@ -341,9 +344,7 @@ body {
   color: #000;
   transition: color 0.3s ease;
 }
-.slider-arrow:hover {
-  color: #888;
-}
+.slider-arrow:hover { color: #888; }
 
 /* ===== Футер ===== */
 .footer {
@@ -353,75 +354,8 @@ body {
   margin-top: 2rem;
 }
 
-/* ===== Адаптив ===== */
-@media (max-width: 1200px) {
-  .testimonial-card {
-    flex: 0 0 300px;
-  }
-}
-@media (max-width: 960px) {
-  .marathon__content {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-  .marathon__actions {
-    justify-content: flex-start;
-  }
-  .testimonial-card {
-    flex: 0 0 80%;
-  }
-}
-@media (max-width: 640px) {
-  .hero {
-    height: 78vh;
-  }
-  .hero-content {
-    padding: 2rem 1.2rem;
-  }
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  .marathon {
-    padding: 2rem 1rem;
-  }
-  .info-card {
-    flex: 1 1 100%;
-  }
-}
-@media (max-width: 600px) {
-  .testimonial-card {
-    flex: 0 0 95%;
-  }
-  .slider-arrow {
-    display: none;
-  }
-}
-.btn-yellow {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-}
-.custom-btn {
-  display: inline-block;
-  padding: 16px 32px; /* Збільшений розмір */
-  background-color: #000000; /* Чорний */
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  border-radius: 12px; /* Скруглені кути */
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Тінь */
-  transition: all 0.3s ease-in-out; /* Анімація */
-}
-
-.custom-btn:hover {
-  background-color: #1a1a1a; /* Темно-сірий при наведенні */
-  transform: translateY(-6px) scale(2.03); /* Підняття кнопки */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Більша тінь */
-}
 /* ===== Telegram-кнопки (custom-btn) ===== */
+/* Виправлення: залишили ОДНУ версію .custom-btn, прибрали дублікати і scale(2.03) */
 .custom-btn {
   display: inline-block;
   padding: 16px 36px;
@@ -436,32 +370,41 @@ body {
   border-radius: 14px;
   cursor: pointer;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .custom-btn:hover {
   background-color: #1a1a1a;
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
 }
-
 .custom-btn:active {
   transform: scale(0.98);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== Прибрати підкреслення в "Марафон по немецкому" ===== */
-.marathon__title {
-  text-decoration: none !important;
+/* ===== Адаптив ===== */
+@media (max-width: 1200px) {
+  .testimonial-card { flex: 0 0 300px; }
 }
-a.marathon-card {
-  text-decoration: none !important;
-  color: inherit;
+
+@media (max-width: 960px) {
+  .marathon__content {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .marathon__actions { justify-content: flex-start; }
+  .testimonial-card { flex: 0 0 80%; }
 }
-a.marathon-card:hover {
-  text-decoration: none !important;
+
+@media (max-width: 640px) {
+  .hero { height: 78vh; }
+  .hero-content { padding: 2rem 1.2rem; }
+  .hero-content h1 { font-size: 2rem; }
+  .marathon { padding: 2rem 1rem; }
+  .info-card { flex: 1 1 100%; }
 }
-a.marathon-card {
-  text-decoration: none !important;
-  color: var(--white) !important;
+
+@media (max-width: 600px) {
+  .testimonial-card { flex: 0 0 95%; }
+  .slider-arrow { display: none; }
 }
