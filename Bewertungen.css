@@ -1,0 +1,162 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --primary: #2294ff;
+  --primary-2: #00aaff;
+  --yellow: #ffd400;
+  --bg: #f5f8ff;
+  --text: #000000;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(0,0,0,.12);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+  background: linear-gradient(135deg, var(--bg), #fff);
+  color: var(--text);
+  padding-top: 100px;
+}
+
+/* ===== Навбар ===== */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,.6);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+}
+.logo:hover {
+  color: var(--primary);
+}
+.navbar nav {
+  display: flex;
+  gap: 1.5rem;
+}
+.navbar nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  position: relative;
+}
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0;
+  background: var(--primary);
+  transition: width .25s ease;
+}
+.navbar nav a:hover {
+  color: var(--primary);
+}
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== Основний контент ===== */
+.main-content {
+  padding: 2rem 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title, .form-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.section-title::after, .form-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 0.8rem auto 0;
+  background: linear-gradient(90deg, #ffd400, #ffea80);
+  border-radius: 2px;
+}
+
+.testimonials-list {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-bottom: 3rem;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Форма ===== */
+.testimonial-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.testimonial-form input,
+.testimonial-form textarea {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.testimonial-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ===== Кнопка ===== */
+.btn-yellow {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffd400, #ffea80);
+  color: #222;
+  text-decoration: none;
+  padding: 0.9rem 1.4rem;
+  border-radius: 12px;
+  border: 1px solid #ffd400;
+  box-shadow: 0 10px 24px rgba(255, 212, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, .06);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+  font-weight: 600;
+  text-align: center;
+}
+.btn-yellow:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #ffe766, #fff4a0);
+  box-shadow: 0 16px 32px rgba(255, 212, 0, 0.45);
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 1.2rem;
+  background: #fff;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #555;
+}
