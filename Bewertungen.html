@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bewertungen — LLS Schule</title>
+  <link rel="stylesheet" href="assets/css/відгуки.css" />
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header class="navbar glass-nav">
+    <a href="home.html" class="navbar-link logo">LLS Schule</a>
+    <nav>
+      <a href="відгуки.html">Bewertungen</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="testimonials-section">
+      <!-- Спочатку форма -->
+      <h2 class="form-title">Hinterlassen Sie Ihre Bewertung</h2>
+      <form class="testimonial-form" id="testimonialForm">
+        <input type="text" placeholder="Ihr Name" id="nameInput" required />
+        <textarea placeholder="Ihre Bewertung" id="messageInput" required></textarea>
+        <button type="submit" class="btn-yellow">Absenden</button>
+      </form>
+
+      <!-- Потім відгуки -->
+  <h1 class="section-title">Bewertungen unserer Schüler</h1>
+      <div class="testimonials-list" id="testimonialList">
+        <!-- Відгуки вставлятимуться сюди JS-ом -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 LLS Online-Schule. Deutsch, Englisch, Französisch.</p>
+  </footer>
+
+  <script>
+    const testimonialForm = document.getElementById('testimonialForm');
+    const testimonialList = document.getElementById('testimonialList');
+
+    const addTestimonial = (name, message) => {
+      const card = document.createElement('div');
+      card.className = 'testimonial-card';
+      card.innerHTML = `
+        <p>“${message}”</p>
+        <h4>— ${name}</h4>
+      `;
+      testimonialList.prepend(card);
+    };
+
+    testimonialForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('nameInput').value.trim();
+      const message = document.getElementById('messageInput').value.trim();
+      if (name && message) {
+        addTestimonial(name, message);
+        testimonialForm.reset();
+      }
+    });
+
+    // Стартові відгуки
+    const initialTestimonials = [
+      { name: "Oleg, Berlin", message: "Dieser Marathon hat wirklich meine Einstellung zum Deutschlernen verändert! Super Unterstützung und Atmosphäre." },
+      { name: "Anna, München", message: "Ich bin dem Lehrer Nikita sehr dankbar, erklärt alles verständlich und interessant." },
+      { name: "Jonas, Köln", message: "Viel Praxis und verständliche Erklärungen. Mein Kind ist begeistert vom Lehrer." }
+    ];
+    initialTestimonials.forEach(t => addTestimonial(t.name, t.message));
+  </script>
+</body>
+</html>
