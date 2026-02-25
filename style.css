@@ -1,0 +1,467 @@
+/* Базові змінні */
+:root {
+  --black: #000;
+  --white: #fff;
+  --primary: #2294ff;
+  --primary-2: #00aaff;
+  --yellow: #ffd400;
+  --bg: #f5f8ff;
+  --text: #000000;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(0,0,0,.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--bg), #fff);
+  overflow-x: hidden;
+}
+
+/* ===== Навбар ===== */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,.6);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+}
+.logo:hover {
+  color: var(--primary);
+}
+.navbar nav {
+  display: flex;
+  gap: 1.5rem;
+}
+.navbar nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  position: relative;
+}
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0;
+  background: var(--primary);
+  transition: width .25s ease;
+}
+.navbar nav a:hover {
+  color: var(--primary);
+}
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #85d9ee 0%, #34aaee 100%);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #104ed3d8, #88c5ff);
+  opacity: .85;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+  text-align: center;
+  color: var(--white);
+  background: rgba(128, 152, 173, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0,0,0,.2);
+}
+.hero-content h1 {
+  margin: 0 0 .5rem;
+  font-size: 2.6rem;
+  font-weight: 800;
+}
+.hero-content h2 {
+  margin: 0 0 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.hero-content p {
+  margin: 0 0 1.6rem;
+  line-height: 1.6;
+}
+.register-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 10px;
+  background: #628cff;
+  color: #fff;
+  text-decoration: none;
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,.2);
+}
+.register-btn:hover {
+  background: #78a3ff;
+  transform: scale(1.04);
+}
+
+/* ===== Інфо-карти ===== */
+.info-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.info-card {
+  flex: 1 1 460px;
+  max-width: 560px;
+  background: rgba(255,255,255,.8);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 1.5rem 1.8rem;
+  box-shadow: var(--shadow);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,.18);
+}
+.info-card h2 {
+  margin: .2rem 0 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #111;
+  position: relative;
+}
+.info-card h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  background: #2d6fff;
+  margin: .6rem auto 0;
+  border-radius: 2px;
+}
+.reason-list {
+  padding-left: 1.2rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ===== Марафон ===== */
+.marathon {
+  padding: 2rem 1.5rem;
+  background:
+    radial-gradient(80rem 80rem at -10% -20%, #000 30%, #111 60%, #151515 100%),
+    linear-gradient(0deg, #000, #000);
+  color: var(--white);
+}
+.marathon__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  grid-template-columns: 1.4fr .9fr;
+  background:
+    linear-gradient(135deg, rgba(255,212,0,.12), rgba(255,212,0,.04)) padding-box,
+    linear-gradient(135deg, #ffd400, #ffef7a) border-box;
+  border: 2px solid transparent;
+  border-radius: 24px;
+  padding: 2rem;
+  position: relative;
+  isolation: isolate;
+}
+.marathon__content::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  z-index: -1;
+  background: linear-gradient(135deg, #ffd400, #ffe766);
+  filter: blur(14px);
+  opacity: .35;
+}
+.marathon__title {
+  font-size: 2.2rem;
+  line-height: 1.1;
+  margin: 0 0 .6rem;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,.25);
+  text-decoration: none; /* прибираємо підкреслення */
+}
+.marathon__subtitle {
+  margin: 0;
+  color: #f5f5f5;
+  opacity: .95;
+  line-height: 1.6;
+}
+.marathon__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ===== Кнопка ЖОВТА ===== */
+.btn-yellow {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffd400, #ffea80);
+  color: #222;
+  text-decoration: none;
+  padding: 0.9rem 1.4rem;
+  border-radius: 12px;
+  border: 1px solid #ffd400;
+  box-shadow: 0 10px 24px rgba(255, 212, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, .06);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.btn-yellow:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #ffe766, #fff4a0);
+  box-shadow: 0 16px 32px rgba(255, 212, 0, 0.45);
+}
+.btn-yellow:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(255, 212, 0, 0.3);
+}
+
+/* ===== Анімація кнопок ===== */
+.animated-btn {
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 8px 24px rgba(34,148,255,.12);
+}
+.animated-btn:hover {
+  transform: scale(1.04) translateY(-2px);
+}
+.animated-btn:active {
+  transform: scale(0.98);
+}
+
+/* ===== Testimonials ===== */
+.testimonials {
+  padding: 2rem 1.5rem;
+}
+.section-title {
+  font-size: 2.2rem;
+  margin: 2.5rem auto 1.5rem;
+  text-align: center;
+  color: #222;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: .8rem auto 0;
+  background: linear-gradient(90deg, #ffd400, #ffea80);
+  border-radius: 2px;
+}
+.testimonials-btn {
+  display: block;
+  width: max-content;
+  margin: 1rem auto 0;
+}
+
+/* ===== Слайдер відгуків ===== */
+.testimonial-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+  max-width: 1240px;
+  margin: 0 auto 2rem;
+  padding: 0 10px;
+  position: relative;
+}
+.slider-window {
+  overflow: hidden;
+  width: 100%;
+}
+.slider-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s ease;
+  padding: 10px 0;
+}
+.testimonial-card {
+  flex: 0 0 380px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  font-size: 1.05rem;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+.slider-arrow {
+  font-size: 2rem;
+  padding: 0 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  transition: color 0.3s ease;
+}
+.slider-arrow:hover {
+  color: #888;
+}
+
+/* ===== Футер ===== */
+.footer {
+  text-align: center;
+  padding: 1.2rem;
+  background: #fff;
+  margin-top: 2rem;
+}
+
+/* ===== Адаптив ===== */
+@media (max-width: 1200px) {
+  .testimonial-card {
+    flex: 0 0 300px;
+  }
+}
+@media (max-width: 960px) {
+  .marathon__content {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .marathon__actions {
+    justify-content: flex-start;
+  }
+  .testimonial-card {
+    flex: 0 0 80%;
+  }
+}
+@media (max-width: 640px) {
+  .hero {
+    height: 78vh;
+  }
+  .hero-content {
+    padding: 2rem 1.2rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .marathon {
+    padding: 2rem 1rem;
+  }
+  .info-card {
+    flex: 1 1 100%;
+  }
+}
+@media (max-width: 600px) {
+  .testimonial-card {
+    flex: 0 0 95%;
+  }
+  .slider-arrow {
+    display: none;
+  }
+}
+.btn-yellow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+.custom-btn {
+  display: inline-block;
+  padding: 16px 32px; /* Збільшений розмір */
+  background-color: #000000; /* Чорний */
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 12px; /* Скруглені кути */
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Тінь */
+  transition: all 0.3s ease-in-out; /* Анімація */
+}
+
+.custom-btn:hover {
+  background-color: #1a1a1a; /* Темно-сірий при наведенні */
+  transform: translateY(-6px) scale(2.03); /* Підняття кнопки */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Більша тінь */
+}
+/* ===== Telegram-кнопки (custom-btn) ===== */
+.custom-btn {
+  display: inline-block;
+  padding: 16px 36px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  text-decoration: none !important;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+}
+
+.custom-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Прибрати підкреслення в "Марафон по немецкому" ===== */
+.marathon__title {
+  text-decoration: none !important;
+}
+a.marathon-card {
+  text-decoration: none !important;
+  color: inherit;
+}
+a.marathon-card:hover {
+  text-decoration: none !important;
+}
+a.marathon-card {
+  text-decoration: none !important;
+  color: var(--white) !important;
+}
