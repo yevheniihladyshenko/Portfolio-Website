@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leben in Deutschland</title>
+  <link rel="stylesheet" href="assets/css/марафон.css">
+</head>
+<body>
+
+  <div class="top-section">
+  <div class="school-name">LLS Schule</div>
+  <h1>Leben in Deutschland<br>In 10 Tagen</h1>
+  <p class="subtitle">Bereite dich auf den Umzug oder die Reise in nur wenigen Tagen vor</p>
+  </div>
+
+  <div class="bottom-section">
+  <h2>Warum brauchst du diesen Kurs?</h2>
+
+  <p>Du planst nach Deutschland zu gehen – Studium, Arbeit, Daueraufenthalt?</p>
+  <div class="icon">💼</div>
+
+  <p>Möchtest du verstehen, was in der Bank, beim Arzt oder im Amt gesagt wird?</p>
+  <div class="icon">🔥</div>
+
+  <p>Bist du müde von Lehrbüchern und „Der Tisch“ – willst du echte Sätze lernen?</p>
+
+  <div class="divider">★</div>
+  </div>
+
+</body>
+
+<section class="course-program">
+  <div class="program-wrapper">
+    <p class="program-intro">
+      Dann ist dieser Kurs für dich.<br>
+      <span>10 Tage, alles Wesentliche. Ohne unnötiges. Nur das, was in Deutschland wirklich gebraucht wird.</span>
+    </p>
+    <h2 class="program-title">Kursprogramm</h2>
+
+    <ul class="program-list">
+      <li>
+        <span class="circle"></span>
+        <div class="program-day">
+          <strong>Tag 1</strong><br>
+          Grundlegende Sätze<br>
+          <span class="topics">Vorstellung · Begrüßungen · Höflichkeit</span>
+        </div>
+      </li>
+
+      <li>
+        <span class="circle"></span>
+        <div class="program-day">
+          <strong>Tag 2</strong><br>
+          Verkehr<br>
+          <span class="topics">Flughafen · Bahnhof · Tickets · Öffentliche Verkehrsmittel</span>
+        </div>
+      </li>
+
+      <li>
+        <span class="circle"></span>
+        <div class="program-day">
+          <strong>Tag 3</strong><br>
+          Unterkunft<br>
+          <span class="topics">Wohnungssuche · Miete · Kommunikation mit dem Vermieter</span>
+        </div>
+      </li>
+
+      <li>
+        <span class="circle"></span>
+        <div class="program-day">
+          <strong>Tag 4</strong><br>
+          Finanzen<br>
+          <span class="topics">Bank · Kontoeröffnung · Kartenzahlung · Finanzbegriffe</span>
+        </div>
+      </li>
+    </ul>
+
+    <div class="bonus-block">
+      <div class="bonus-icon">⚡</div>
+      <div class="bonus-text">
+  <strong>Und noch mehr Boni:</strong><br>
+  Mini-App-Sammlung, Videomaterialien, PDF mit Sätzen, Audio zum Wiederholen
+      </div>
+    </div>
+
+    <a href="#" class="download-program">
+      <div class="download-left">
+  <strong>Programm herunterladen</strong>
+        <span>PDF</span>
+      </div>
+      <div class="download-arrow">›</div>
+    </a>
+  </div>
+</section>
+<body>
+  <div class="wrap">
+
+    <section class="top-panel" aria-label="Задать вопрос менеджеру">
+      <div class="top-panel-inner">
+  <div class="top-title">Haben Sie Fragen?</div>
+  <div class="top-sub">Stellen Sie sie dem Manager!</div>
+
+        <button class="manager-btn" onclick="window.open('https://t.me/','_blank')">
+          <span class="icon" aria-hidden>
+            <!-- Telegram plane (simple svg) -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 2L2 12.5L8 15.5L10.5 20L13 15.5L22 2Z" fill="#FFD400"/>
+            </svg>
+          </span>
+          <span style="display:inline-block; text-align:left;">
+            Manager bei Telegram!
+            <div style="font-size:12px; color:rgba(255,255,255,0.6); font-weight:500;">Klicken Sie, um zu schreiben</div>
+          </span>
+
+          <svg class="chev" width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <path d="M8 5L16 12L8 19" stroke="#FFD400" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="inner-outline" aria-hidden="true"></div>
+    </section>
+
+    <main>
+  <h1>Kurskosten</h1>
+  <div class="sub">Die ersten <strong>40</strong> Personen können den Kurs mit <strong>50%</strong> Rabatt kaufen</div>
+
+      <div class="countdown" id="countdown">
+        <!-- Hours group -->
+        <div class="time-group">
+          <div class="label">Stunden</div>
+          <div class="two-digit" id="hh">
+            <div class="num">10</div>
+          </div>
+        </div>
+
+        <div style="align-self:center;" class="colon">:</div>
+
+        <!-- Minutes -->
+        <div class="time-group">
+          <div class="label">Minuten</div>
+          <div class="two-digit" id="mm">
+            <div class="num">03</div>
+          </div>
+        </div>
+
+        <div style="align-self:center;" class="colon">:</div>
+
+        <!-- Seconds -->
+        <div class="time-group">
+          <div class="label">Sekunden</div>
+          <div class="two-digit" id="ss">
+            <div class="num">04</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- JS -->
+  <script src="js/js/часи.js" defer></script>
+
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-wrap">
+
+    <main class="main-content">
+
+  <!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leben in Deutschland</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="pricing-section">
+    <!-- Карточка БАЗА -->
+    <section class="pricing-card">
+      <div class="pricing-inner">
+        <div class="stars">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2.5l2.47 5.006L20.4 8.1l-4.2 3.32L17.3 18 12 15.1 6.7 18l1.1-6.58L3.6 8.1l5.93-.594L12 2.5z" fill="#4a4a4a"/>
+          </svg>
+        </div>
+        <h2 class="plan-title">BASIS</h2>
+        <p class="plan-sub">Für alle, die den Kurs im eigenen Tempo absolvieren möchten</p>
+        <div class="included">
+          <div class="included-title">Was ist enthalten:</div>
+          <ul>
+            <li>📹 10 Video-Lektionen (je 10–15 Minuten)</li>
+            <li>📄 PDF-Zusammenfassungen und Spickzettel</li>
+            <li>📦 Themen: Einkaufen, Verkehr, Kommunikation, Dokumente, Alltagssituationen</li>
+            <li>🔓 Zugang für 30 Tage</li>
+            <li>📌 Selbstständiges Lernen, ohne Support</li>
+          </ul>
+        </div>
+        <div class="price">10<span class="euro">€</span></div>
+        <div class="buy-wrap">
+          <button class="buy-btn">
+            <span class="buy-text">Kurs kaufen</span>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <path d="M8 5L16 12L8 19" stroke="#FFD400" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Карточка СТАНДАРТ -->
+    <section class="pricing-card">
+      <div class="pricing-inner">
+        <div class="stars">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2.5l2.47 5.006L20.4 8.1l-4.2 3.32L17.3 18 12 15.1 6.7 18l1.1-6.58L3.6 8.1l5.93-.594L12 2.5z" fill="#4a4a4a"/>
+          </svg>
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2.5l2.47 5.006L20.4 8.1l-4.2 3.32L17.3 18 12 15.1 6.7 18l1.1-6.58L3.6 8.1l5.93-.594L12 2.5z" fill="#4a4a4a"/>
+          </svg>
+        </div>
+        <h2 class="plan-title">STANDARD</h2>
+        <p class="plan-sub">Ideal, wenn du Kontakt zum Kursleiter möchtest</p>
+        <div class="included">
+          <div class="included-title">Was ist enthalten:</div>
+          <ul>
+            <li>⬆️ Alles aus dem „BASIS“-Tarif und zusätzlich ⬇️</li>
+            <li>💬 Support vom Kursleiter via Telegram (Antworten auf Fragen)</li>
+            <li>📝 Korrektur von 2 Hausaufgaben</li>
+            <li>🎯 Empfehlungen zur Verbesserung</li>
+            <li>📅 Support für 10 Tage</li>
+            <li>📌 Nachfragen zu Vokabeln, Rückfragen, Tipps möglich</li>
+          </ul>
+        </div>
+        <div class="price">15<span class="euro">€</span></div>
+        <div class="buy-wrap">
+          <button class="buy-btn">
+            <span class="buy-text">Kurs kaufen</span>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <path d="M8 5L16 12L8 19" stroke="#FFD400" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Карточка ПРО+ -->
+    <section class="pricing-card">
+      <div class="pricing-inner">
+        <div class="stars">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2.5l2.47 5.006L20.4 8.1l-4.2 3.32L17.3 18 12 15.1 6.7 18l1.1-6.58L3.6 8.1l5.93-.594L12 2.5z" fill="#4a4a4a"/>
+          </svg>
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2.5l2.47 5.006L20.4 8.1l-4.2 3.32L17.3 18 12 15.1 6.7 18l1.1-6.58L3.6 8.1l5.93-.594L12 2.5z" fill="#4a4a4a"/>
+          </svg>
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2.5l2.47 5.006L20.4 8.1l-4.2 3.32L17.3 18 12 15.1 6.7 18l1.1-6.58L3.6 8.1l5.93-.594L12 2.5z" fill="#4a4a4a"/>
+          </svg>
+        </div>
+        <h2 class="plan-title">PRO+</h2>
+        <p class="plan-sub">Maximaler Nutzen und Personalisierung</p>
+        <div class="included">
+          <div class="included-title">Was ist enthalten:</div>
+          <ul>
+            <li>📦 Alles aus „STANDARD“</li>
+            <li>🎥 1 persönliches Zoom-Meeting (15–20 Min)</li>
+            <li>🎤 Vertonung der PDF-Sätze durch Muttersprachler (Audio-Bonus)</li>
+            <li>📑 Extra PDF: „10 nützliche Apps für das Leben in DE“</li>
+            <li>📜 Abschlusszertifikat (PDF)</li>
+            <li>🔑 Zugang zum Kurs — 60 Tage</li>
+            <li>📌 Für alle, die mit Eintauchen und „Praxis-Test“ lernen möchten</li>
+          </ul>
+        </div>
+        <div class="price">25<span class="euro">€</span></div>
+        <div class="buy-wrap">
+          <button class="buy-btn">
+            <span class="buy-text">Kurs kaufen</span>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <path d="M8 5L16 12L8 19" stroke="#FFD400" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+    <!-- JS -->
+  <script src="js/js/кнопка.js" defer></script>
+
+
+
+
+
+</body>
+</html>
