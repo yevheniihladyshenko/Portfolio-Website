@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LLS School — Deutsch Online</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <style>
+    /* Секция марафона */
+    .marathon-section {
+      background: #fff;
+      padding: 80px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .marathon-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 60px;
+      max-width: 1100px;
+      width: 100%;
+      align-items: stretch;
+    }
+    .marathon-card {
+      flex: 1;
+      background: linear-gradient(135deg, #ffcc00, #000);
+      color: #fff;
+      border-radius: 16px;
+      padding: 70px 70px;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .marathon-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    }
+    .marathon-title {
+      font-size: 35px;
+      font-weight: 700;
+    }
+    .lesson-buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 25px;
+      flex: 1;
+    }
+    .btn-black {
+      background: #000;
+      color: #fff;
+      padding: 25px 42px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    }
+    .btn-black:hover {
+      background: #333;
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    }
+
+    @media (max-width: 768px) {
+      .marathon-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .lesson-buttons {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Навигация -->
+  <header class="navbar glass-nav">
+    <a href="home.html" class="navbar-link logo">LLS Schule</a>
+    <nav>
+      <a href="відгуки.html">Bewertungen</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Starte dein Abenteuer beim Deutschlernen</h1>
+      <h2>Schnell. Verständlich. Mit Unterstützung vom Lehrer.</h2>
+      <p>Interaktive Lektionen, flexibler Zeitplan und individuelles Programm. Die erste Probestunde ist kostenlos.</p>
+      <a href="марафон.html" class="register-btn">Mehr über uns erfahren</a>
+    </div>
+  </section>
+
+  <main>
+    <!-- Инфо-блоки -->
+    <div class="info-cards-row">
+      <div class="info-card">
+        <h2>Über die Schule</h2>
+        <p>Moderne Online-Schule für Deutsch mit Live-Unterricht, Konversationspraxis, persönlichem Wörterbuch und Feedback. Wir unterrichten auch Englisch und Französisch.</p>
+      </div>
+      <div class="info-card">
+        <h2>Warum wir?</h2>
+        <ul class="reason-list">
+          <li><strong>Individueller Plan</strong> für dein Ziel.</li>
+          <li><strong>Bequeme Form</strong> — online von jedem Gerät.</li>
+          <li><strong>Fortschrittsgarantie</strong> — wir begleiten dich bis zum Ergebnis.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Марафон + кнопки уроков -->
+    <section class="marathon-section">
+      <div class="marathon-container">
+        <!-- Плашка марафон -->
+        <a href="марафон.html" class="marathon-card">
+  <h2 class="marathon-title">Deutsch-Marathon</h2>
+</a>
+
+        <!-- Кнопки уроков -->
+        <div class="lesson-buttons">
+          <a href="https://t.me/Yevheni_i74" class="custom-btn" target="_blank">
+  Einzelunterricht
+</a>
+
+<a href="https://t.me/Yevheni_i74" class="custom-btn" target="_blank">
+  Gruppenunterricht
+</a>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="testimonials">
+  <h1 class="section-title">Was unsere Schüler sagen</h1>
+  <div class="testimonial-slider">
+    <button class="slider-arrow prev" id="testimonial-left" aria-label="Влево">‹</button>
+    <div class="slider-window">
+      <div class="slider-track" id="testimonial-slider">
+        <div class="testimonial-card">
+          <p>⭐⭐⭐⭐⭐<br>„Dieser Marathon hat wirklich meine Einstellung zum Deutschlernen verändert! Super Unterstützung und Atmosphäre.“</p>
+          <h4>— Oleg, Berlin</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>⭐⭐⭐⭐⭐<br>„Ich bin dem Lehrer Nikita sehr dankbar, erklärt alles verständlich und interessant.“</p>
+          <h4>— Anna, München</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>⭐⭐⭐⭐<br>„Viel Praxis und verständliche Erklärungen. Mein Kind ist begeistert vom Lehrer.“</p>
+          <h4>— Jonas, Köln</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>⭐⭐⭐⭐⭐<br>„Das Format hat perfekt zu meinem Arbeitsplan gepasst.“</p>
+          <h4>— Maria, Frankfurt</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>⭐⭐⭐⭐<br>„Das System der Hausaufgaben und das Feedback haben mir sehr gefallen. Alles ist strukturiert!“</p>
+          <h4>— Svetlana, Düsseldorf</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>⭐⭐⭐⭐⭐<br>„Empfehle jedem, der schnell anfangen möchte zu sprechen. Danke an das ganze Team!“</p>
+          <h4>— Artem, Hamburg</h4>
+        </div>
+      </div>
+    </div>
+    <button class="slider-arrow next" id="testimonial-right" aria-label="Вправо">›</button>
+  </div>
+  <a href="відгуки.html" class="btn-yellow testimonials-btn animated-btn">
+  Alle Bewertungen ansehen
+</a>
+
+</section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 LLS Online-Schule. Deutsch, Englisch, Französisch.</p>
+  </footer>
+
+  <!-- Анимация появления -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.info-card, .testimonial-card, .marathon-card, .lesson-buttons a')
+        .forEach((el, i) => {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            el.style.transition = 'transform .5s ease, opacity .5s ease';
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+          }, 150 + i * 120);
+        });
+    });
+  </script>
+  <script src="js/js/testimonials-slider.js" defer></script>
+</body>
+</html>
