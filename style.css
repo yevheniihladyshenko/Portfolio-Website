@@ -408,3 +408,27 @@ a.marathon-card:hover {
   .testimonial-card { flex: 0 0 95%; }
   .slider-arrow { display: none; }
 }
+/* === FORCE FIX (додай в САМИЙ КІНЕЦЬ style.css) === */
+
+/* 1) Telegram-кнопки: прибрати будь-який дикий scale з інших стилів */
+.custom-btn {
+  transform: none !important;
+}
+
+.custom-btn:hover {
+  transform: translateY(-4px) scale(1.05) !important;
+}
+
+/* 2) Кнопка "Alle Bewertungen ansehen" по центру (якщо вона class="btn-black") */
+.btn-black {
+  display: block !important;
+  width: fit-content !important;
+  margin: 1rem auto 0 !important;
+}
+
+/* 3) Якщо ти використовуєш .testimonials-btn — теж центруємо */
+.testimonials-btn {
+  display: block !important;
+  width: fit-content !important;
+  margin: 1rem auto 0 !important;
+}
